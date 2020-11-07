@@ -28,6 +28,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h2>Joke generator</h2>
+        <div class="background"></div>
         <button onClick={this.showJoke} className='btn btn-danger'>See Joke</button>
         <br /><br />
         {this.state.show && <Joke key={joke.id} joke={joke} />}

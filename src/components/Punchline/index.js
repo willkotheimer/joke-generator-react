@@ -10,7 +10,7 @@ class Punchline extends Component {
     return (
       <div className=''>
         <div className='punchline card-text'>{joke.punchline}</div>
-        <br/><br/>
+        <br /><br />
         <button onClick={this.refreshPage} className='btn btn-danger'>See Another Joke</button>
       </div>
     );

@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// eslint-disable-next-line
 const getJoke = () => new Promise((resolve, reject) => {
   axios
     .get('https://official-joke-api.appspot.com/random_joke')
@@ -10,4 +11,4 @@ const getJoke = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export default { getJoke };
+export default getJoke;
