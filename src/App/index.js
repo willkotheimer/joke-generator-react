@@ -8,29 +8,24 @@ class App extends React.Component {
     joke: [],
   }
 
-  componentDidMount() {
+  makeAJoke = () => {
     jokeData.getJoke().then((resp) => {
       this.setState({
         joke: resp,
-        show: false,
       });
     });
   }
 
-  showJoke = () => {
-    const { show } = this.state;
-    this.setState({ show: !show });
-  }
-
   render() {
     const { joke } = this.state;
-
+    const showtheDangJoke = () => <Joke key={joke.id} joke={joke} />;
     return (
       <div className="App">
         <h2>Joke generator</h2>
-        <button onClick={this.showJoke} className='btn btn-danger'>See Joke</button>
+        <div class="background"></div>
+        <button onClick={this.makeAJoke} className='btn btn-danger'>See Joke</button>
         <br /><br />
-        {this.state.show && <Joke key={joke.id} joke={joke} />}
+        {this.state.joke.id && showtheDangJoke()}
       </div>
     );
   }

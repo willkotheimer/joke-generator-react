@@ -9,5 +9,5 @@ const getJoke = () => new Promise((resolve, reject) => {
     })
     .catch((error) => reject(error));
 });
-
+// eslint-disable-next-line
 export default { getJoke };
